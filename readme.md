@@ -11,6 +11,7 @@
     - [Creational Patterns](#creational-patterns)
     - [Structural Patterns](#structural-patterns)
     - [Behavioral Patterns](#behavioral-patterns)
+- [Principles](#principles)
 - [Links](#links)
 
 </details>
@@ -81,10 +82,14 @@
 - [ ] Memento
 - [ ] Observer
 - [ ] State
-- [ ] Strategy
+- [x] Strategy
 - [ ] Template Method
 - [ ] Visitor
 - [ ] Null Object
+
+## Principles
+
+- [ ] SOLID
 
 ## Links
 

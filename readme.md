@@ -83,8 +83,8 @@
 - [ ] Mediator
 - [ ] Memento
 - [ ] Observer
-- [x] [State](./patterns#state)
-- [x] [Strategy](./patterns#strategy)
+- [x] [State](./patterns/readme.md#state)
+- [x] [Strategy](./patterns/readme.md#strategy)
 - [ ] Template Method
 - [ ] Visitor
 - [ ] Null Object

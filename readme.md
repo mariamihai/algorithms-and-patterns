@@ -54,6 +54,8 @@
 
 ## Design Patterns
 
+[Here](./patterns)
+
 ### Creational Patterns
 
 - [ ] Factory Method
@@ -81,8 +83,8 @@
 - [ ] Mediator
 - [ ] Memento
 - [ ] Observer
-- [x] State
-- [x] Strategy
+- [x] [State](./patterns#state)
+- [x] [Strategy](./patterns#strategy)
 - [ ] Template Method
 - [ ] Visitor
 - [ ] Null Object

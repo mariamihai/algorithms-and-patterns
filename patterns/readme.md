@@ -1,5 +1,16 @@
 # Design patterns
 
+<details>
+    <summary>Table of Content</summary>
+
+- [Creational Patterns](#creational-patterns)
+- [Structural Patterns](#structural-patterns)
+- [Behavioral Patterns](#behavioral-patterns)
+  - [State](#state)
+  - [Strategy](#strategy)
+
+</details>
+
 ## Creational Patterns
 
 ## Structural Patterns
@@ -27,7 +38,7 @@ An object alters its behavior when its internal state changes.
   - needing to organize code and decrease complexity ([Single Responsibility Principle](../principles/solid/readme.md))
   - there are a lot of states and want to add new states independently of existing ones ([Open / Closed Principle](../principles/solid/readme.md))
 
-[Code here](./blob/main/patterns/behavioralpatterns/state/vendingMachine_test.go).
+[Code here](./behavioralpatterns/state/vendingMachine_test.go).
 
 ### Strategy
 
@@ -52,6 +63,6 @@ For designing a family of interchangeable algorithms hidden behind an abstractio
   - you can alter the context's behavior at runtime and associate a different strategy to it
   - respects [Open / Closed Principle](../principles/solid/readme.md) - introduce different strategies or policies without changing the context
 
-[Code here](./blob/main/patterns/behavioralpatterns/strategy/context_test.go).
+[Code here](./behavioralpatterns/strategy/context_test.go).
 
 Example: [AoC 2022, day 11](https://adventofcode.com/2022/day/11) (the operation done by each monkey)

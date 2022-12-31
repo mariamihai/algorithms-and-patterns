@@ -1,11 +1,11 @@
-package strategy_test
+package main
 
 import (
 	"code/patterns/behavioralpatterns/strategy"
 	"fmt"
 )
 
-func ExampleExecuteStrategy() {
+func stategyExample() {
 	add := strategy.Addition{}
 	ctx := strategy.InitContext(1, 2, add)
 	fmt.Printf("Executing: 1 + 2 = %d\n", ctx.ExecuteStrategy())

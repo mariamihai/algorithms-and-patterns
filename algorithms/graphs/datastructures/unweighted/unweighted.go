@@ -14,7 +14,7 @@ func NewGraph(n int) *Graph {
 	}
 }
 
-func (g *Graph) AddEdge(from, to int) error {
+func (g *Graph) AddDirectedEdge(from, to int) error {
 	if isInvalidNode(from, g.NumNodes) {
 		return fmt.Errorf("invalid from node - %d", from)
 	}
@@ -26,8 +26,23 @@ func (g *Graph) AddEdge(from, to int) error {
 	// from -> to
 	g.Edges[from] = append(g.Edges[from], to)
 
-	// For undirected graphs add to -> from
-	// g.Edges[to] = append(g.Edges[to], from)
+	return nil
+}
+
+func (g *Graph) AddUndirectedEdge(from, to int) error {
+	if isInvalidNode(from, g.NumNodes) {
+		return fmt.Errorf("invalid from node - %d", from)
+	}
+
+	if isInvalidNode(to, g.NumNodes) {
+		return fmt.Errorf("invalid to node - %d", to)
+	}
+
+	// from -> to
+	g.Edges[from] = append(g.Edges[from], to)
+
+	// to -> from
+	g.Edges[to] = append(g.Edges[to], from)
 
 	return nil
 }

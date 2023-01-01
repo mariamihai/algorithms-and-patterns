@@ -20,7 +20,7 @@ func NewGraph(n int) *Graph {
 	}
 }
 
-func (g *Graph) AddEdge(from, to, weight int) error {
+func (g *Graph) AddDirectedEdge(from, to, weight int) error {
 	if isInvalidNode(from, g.NumNodes) {
 		return fmt.Errorf("invalid from node - %d", from)
 	}
@@ -42,6 +42,32 @@ func (g *Graph) AddEdge(from, to, weight int) error {
 	//	To:     to,
 	//	Weight: weight,
 	//})
+
+	return nil
+}
+
+func (g *Graph) AddUndirectedEdge(from, to, weight int) error {
+	if isInvalidNode(from, g.NumNodes) {
+		return fmt.Errorf("invalid from node - %d", from)
+	}
+
+	if isInvalidNode(to, g.NumNodes) {
+		return fmt.Errorf("invalid to node - %d", to)
+	}
+
+	// from -> to
+	g.Edges[from] = append(g.Edges[from], Edge{
+		From:   from,
+		To:     to,
+		Weight: weight,
+	})
+
+	//  to -> from
+	g.Edges[to] = append(g.Edges[to], Edge{
+		From:   from,
+		To:     to,
+		Weight: weight,
+	})
 
 	return nil
 }

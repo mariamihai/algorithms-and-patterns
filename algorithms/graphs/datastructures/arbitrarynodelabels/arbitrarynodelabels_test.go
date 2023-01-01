@@ -6,9 +6,9 @@ func ExamplePrint() {
 	g.AddNode(5)
 	g.AddNode(7)
 
-	g.AddEdge(3, 5)
-	g.AddEdge(3, 7)
-	g.AddEdge(5, 7)
+	g.AddDirectedEdge(3, 5)
+	g.AddDirectedEdge(3, 7)
+	g.AddDirectedEdge(5, 7)
 
 	g.print()
 

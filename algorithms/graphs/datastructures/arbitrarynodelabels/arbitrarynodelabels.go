@@ -27,7 +27,19 @@ func (g *Graph) AddNode(id ID) bool {
 	return true
 }
 
-func (g *Graph) AddEdge(from, to ID) {
+func (g *Graph) AddDirectedEdge(from, to ID) {
+	// Add the nodes if they don't exist
+	_ = g.AddNode(from)
+	_ = g.AddNode(to)
+
+	// from -> to
+	if _, ok := g.Edges[from]; !ok {
+		g.Edges[from] = make(map[ID]struct{})
+	}
+	g.Edges[from][to] = struct{}{}
+}
+
+func (g *Graph) AddUndirectedEdge(from, to ID) {
 	// Add the nodes if they don't exist
 	_ = g.AddNode(from)
 	_ = g.AddNode(to)
@@ -38,11 +50,11 @@ func (g *Graph) AddEdge(from, to ID) {
 	}
 	g.Edges[from][to] = struct{}{}
 
-	// For undirected graphs add to -> from
-	//if _, ok := g.Edges[to]; !ok {
-	//	g.Edges[to] = make(map[ID]struct{})
-	//}
-	//g.Edges[to][from] = struct{}{}
+	// to -> from
+	if _, ok := g.Edges[to]; !ok {
+		g.Edges[to] = make(map[ID]struct{})
+	}
+	g.Edges[to][from] = struct{}{}
 }
 
 func (g *Graph) printFromNode(id ID) {

@@ -23,7 +23,7 @@ func ExamplePrint() {
 }
 
 func addEdge(g *Graph, from, to, weight int) {
-	err := g.AddEdge(from, to, weight)
+	err := g.AddDirectedEdge(from, to, weight)
 
 	if err != nil {
 		fmt.Printf("Could not add the edge %d -> %d", from, to)

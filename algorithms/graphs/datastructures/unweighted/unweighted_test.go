@@ -25,7 +25,7 @@ func ExamplePrint() {
 }
 
 func addEdge(g *Graph, from, to int) {
-	err := g.AddEdge(from, to)
+	err := g.AddDirectedEdge(from, to)
 
 	if err != nil {
 		fmt.Printf("Could not add the edge %d -> %d", from, to)
@@ -77,7 +77,7 @@ func TestGraph_AddEdge(t *testing.T) {
 				NumNodes: tt.fields.NumNodes,
 				Edges:    tt.fields.Edges,
 			}
-			if err := g.AddEdge(tt.args.from, tt.args.to); (err != nil) != tt.wantErr {
+			if err := g.AddDirectedEdge(tt.args.from, tt.args.to); (err != nil) != tt.wantErr {
 				t.Errorf("AddEdge() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})

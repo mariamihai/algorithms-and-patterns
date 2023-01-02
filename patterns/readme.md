@@ -4,14 +4,40 @@
     <summary>Table of Content</summary>
 
 - [Creational Patterns](#creational-patterns)
+  - [Factory Method](#factory-method)
 - [Structural Patterns](#structural-patterns)
 - [Behavioral Patterns](#behavioral-patterns)
   - [State](#state)
   - [Strategy](#strategy)
+- [Links](#links)
 
 </details>
 
 ## Creational Patterns
+
+### Factory Method
+
+Hide the creation of the object and expose it under an interface.
+
+![img.png](../img/patterns/creational/factorymethod.png)
+
+- the objects (aka products) are created inside a factory function
+- the creator, the one which defines the factory method, has other primary responsibility instead of creating products
+- it has some business logic related to the created products
+- the client uses an instance of a concrete creator but doesn't know which concrete product it uses
+
+
+- used when the exact types and dependencies are not known beforehand
+- the product creation is separated from its use
+- can be reusing existing products instead of creating new ones each time
+
+
+- used when
+  - want to avoid tight coupling between the products and the creator
+  - the product creation is in one place only ([Single Responsibility Principle](../principles/solid/readme.md))
+  - makes it easy to add new product types ([Open / Closed Principle](../principles/solid/readme.md))
+
+[Code here](./creationalpatterns/examples/factorymethod.go).
 
 ## Structural Patterns
 
@@ -38,7 +64,7 @@ An object alters its behavior when its internal state changes.
   - needing to organize code and decrease complexity ([Single Responsibility Principle](../principles/solid/readme.md))
   - there are a lot of states and want to add new states independently of existing ones ([Open / Closed Principle](../principles/solid/readme.md))
 
-[Code here](./behavioralpatterns/state/vendingMachine_test.go).
+[Code here](./behavioralpatterns/examples/state.go).
 
 ### Strategy
 
@@ -63,6 +89,14 @@ For designing a family of interchangeable algorithms hidden behind an abstractio
   - you can alter the context's behavior at runtime and associate a different strategy to it
   - respects [Open / Closed Principle](../principles/solid/readme.md) - introduce different strategies or policies without changing the context
 
-[Code here](./behavioralpatterns/strategy/context_test.go).
+[Code here](./behavioralpatterns/examples/strategy.go).
 
 Example: [AoC 2022, day 11](https://adventofcode.com/2022/day/11) (the operation done by each monkey)
+
+## Links
+
+- https://refactoring.guru/design-patterns
+- https://golangbyexample.com/all-design-patterns-golang/
+- https://medium.com/swlh/design-patterns-in-go-d90e7866deff
+- https://dev.to/mauriciolinhares/gof-design-patterns-that-still-make-sense-in-go-27k5
+- https://github.com/tmrts/go-patterns

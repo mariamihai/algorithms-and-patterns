@@ -13,4 +13,8 @@ func factoryMethodExample() {
 
 	fmt.Printf("Gun %s (power %d)\n", ak47.GetName(), ak47.GetPower())
 	fmt.Printf("Gun %s (power %d)\n", musket.GetName(), musket.GetPower())
+
+	// Output
+	// Gun Ak47 (power 5)
+	// Gun Musket (power 1)
 }

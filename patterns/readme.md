@@ -5,6 +5,7 @@
 
 - [Creational Patterns](#creational-patterns)
   - [Factory Method](#factory-method)
+  - [Abstract Factory](#abstract-factory)
 - [Structural Patterns](#structural-patterns)
 - [Behavioral Patterns](#behavioral-patterns)
   - [State](#state)
@@ -38,6 +39,21 @@ Hide the creation of the object and expose it under an interface.
   - makes it easy to add new product types ([Open / Closed Principle](../principles/solid/readme.md))
 
 [Code here](./creationalpatterns/examples/factorymethod.go).
+
+### Abstract Factory
+
+Creates families of objects
+
+![img.png](../img/patterns/creational/abstractfactory.png)
+
+- factory of factories
+- add new products or families of products easily
+- the products from factories are compatible with each other
+- loose coupling between concrete products and client code
+- the product creation is in one place only ([Single Responsibility Principle](../principles/solid/readme.md))
+- makes it easy to add new products or variants  ([Open / Closed Principle](../principles/solid/readme.md))
+
+[Code here](./creationalpatterns/examples/abstractfactory.go).
 
 ## Structural Patterns
 

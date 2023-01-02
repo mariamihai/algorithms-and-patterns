@@ -58,8 +58,8 @@
 
 ### Creational Patterns
 
-- [ ] Factory Method
-- [ ] Abstract Factory
+- [x] [Factory Method](./patterns/readme.md#factory-method)
+- [x] [Abstract Factory](./patterns/readme.md#abstract-factory)
 - [ ] Builder
 - [ ] Prototype
 - [ ] Singleton
@@ -100,10 +100,3 @@ Algorithms:
 - https://www.jobsity.com/blog/11-essential-algorithms-for-programmers
 - https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
 - https://medium.com/techie-delight/top-25-algorithms-every-programmer-should-know-373246b4881b
-
-Design patterns:
-- https://refactoring.guru/design-patterns
-- https://golangbyexample.com/all-design-patterns-golang/
-- https://medium.com/swlh/design-patterns-in-go-d90e7866deff
-- https://dev.to/mauriciolinhares/gof-design-patterns-that-still-make-sense-in-go-27k5
-- https://github.com/tmrts/go-patterns

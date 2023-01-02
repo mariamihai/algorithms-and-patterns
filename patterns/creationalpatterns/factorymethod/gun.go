@@ -7,18 +7,18 @@ type Gun struct {
 	power int
 }
 
-func (g Gun) SetName(name string) {
+func (g *Gun) SetName(name string) {
 	g.name = name
 }
 
-func (g Gun) SetPower(power int) {
+func (g *Gun) SetPower(power int) {
 	g.power = power
 }
 
-func (g Gun) GetName() string {
+func (g *Gun) GetName() string {
 	return g.name
 }
 
-func (g Gun) GetPower() int {
+func (g *Gun) GetPower() int {
 	return g.power
 }

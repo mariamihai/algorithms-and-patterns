@@ -4,6 +4,7 @@
     <summary>Table of Content</summary>
 
 - [Creational Patterns](#creational-patterns)
+  - [Builder](#builder)
   - [Factory Method](#factory-method)
   - [Abstract Factory](#abstract-factory)
 - [Structural Patterns](#structural-patterns)
@@ -15,6 +16,42 @@
 </details>
 
 ## Creational Patterns
+
+### Builder
+
+Construct complex objects step by step.
+
+![img.png](../img/patterns/creational/builder.png)
+
+- create different representations of the object by using the same construction code
+- the Builder doesn’t allow other objects to access the product while it’s being built
+
+
+- builder
+  - extract the construction code
+  - can execute a series of steps on a builder object
+  - call only those steps that are necessary for producing a particular configuration of an object
+  - can have several builder classes that implement the same steps but in a different way
+  - builders need to provide their own methods for returning results as different products might be created from different builders
+    (the products don't follow a common interface)
+
+
+- director
+  - not mandatory
+  - extract a series of calls to the builder steps 
+  - it defines the order in which to execute the building steps
+  - provides reusability - can be used for grouping different construction routines
+  - the director class completely hides the details of product construction from the client code
+  - the client only needs to associate a builder with a director, launch the construction with the director, and get the result from the builder.
+
+
+- used when
+  - the products are quite complex and require extensive configuration
+  - want to create different representations of the products (same base product; for eg., stone and wooden houses)
+  - the representations are based on similar steps with different details only
+  - isolate complex product construction logic from business logic ([Single Responsibility Principle](../principles/solid/readme.md))
+
+[Code here](./creationalpatterns/examples/builder.go).
 
 ### Factory Method
 
@@ -42,7 +79,7 @@ Hide the creation of the object and expose it under an interface.
 
 ### Abstract Factory
 
-Creates families of objects
+Create families of objects
 
 ![img.png](../img/patterns/creational/abstractfactory.png)
 

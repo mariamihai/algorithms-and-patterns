@@ -8,4 +8,7 @@ func main() {
 
 	fmt.Println("\n--- Abstract Factory Example: ---")
 	abstractFactoryExample()
+
+	fmt.Println("\n--- Builder Example: ---")
+	builderExample()
 }

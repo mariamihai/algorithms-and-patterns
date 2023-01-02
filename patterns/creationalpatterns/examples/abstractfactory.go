@@ -19,7 +19,7 @@ func abstractFactoryExample() {
 	nikeShirt := nikeFactory.MakeShirt()
 
 	fmt.Printf("Nike shoe (logo %s, size %d)\n", nikeShoe.GetLogo(), nikeShoe.GetSize())
-	fmt.Printf("Nike shirt (logo %s, size %d)\n", nikeShirt.GetLogo(), nikeShirt.GetSize())
+	fmt.Printf("Nike shirt (logo %s, size %d)\n\n", nikeShirt.GetLogo(), nikeShirt.GetSize())
 
 	// Output
 	// Adidas shoe (logo adidas, size 40)

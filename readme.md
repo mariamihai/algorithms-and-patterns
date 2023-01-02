@@ -60,7 +60,7 @@
 
 - [x] [Factory Method](./patterns/readme.md#factory-method)
 - [x] [Abstract Factory](./patterns/readme.md#abstract-factory)
-- [ ] Builder
+- [x] [Builder](./patterns/readme.md#builder)
 - [ ] Prototype
 - [ ] Singleton
 - [ ] Object Pool
